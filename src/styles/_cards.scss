@@ -1,0 +1,118 @@
+.cards{
+   display: grid;
+   gap: 1rem;
+
+   @include tabplus{
+        max-width: 69.375rem;
+        inline-size: 100%;
+        block-size: 35.8125rem;
+        gap: 1.5rem;
+      
+       grid-template: 
+       "daniel daniel jonathan kira" 1fr
+       "janette patrick patrick kira" 1fr/ 1fr 1fr 1fr 1fr;
+   }
+}
+
+.card{
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap: 1rem;
+    border-radius: 10px;
+   
+
+    &:first-child{
+        background-color: var(--Moderate-violet);
+        color: var(--White);
+        background-image: url('../../images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-position: 81% top;
+       
+        @include tabplus{
+            grid-area: daniel;
+            
+        }
+    }
+
+    &:nth-child(2){
+        background-color: var(--Very-dark-grayish-blue);
+        color: var(--White);
+
+        @include tabplus{
+            grid-area: jonathan;
+        }
+    }
+
+    &:nth-child(3){
+        background-color: var(--White);
+        color:var(--Very-dark-grayish-blue) ;
+        @include tabplus{
+            grid-area: janette;
+        }
+    }
+
+    &:nth-child(4){
+        background-color: var(--Very-dark-blackish-blue);
+        color: var(--White);
+
+        @include tabplus{
+             grid-area: patrick;
+        }
+    }
+
+    &:last-child{
+        background-color: var(--White);
+        color:var(--Very-dark-grayish-blue) ;
+        @include tabplus{
+            grid-area: kira;
+        }
+    }
+   
+    &__info{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .user-image{
+            border-radius: 100%;
+            overflow: hidden;
+            inline-size: 30px;
+            block-size: 30px;
+            border: 2px solid var(--Light-gray);
+
+            img{
+                display: block;
+                inline-size: 100%;
+                block-size: 100%;
+            }
+        }
+
+        .user-name{
+
+            p{
+                font-size: 1rem;
+            }
+
+            span{
+                opacity: 50%;
+            }
+        }
+    }
+
+    &__testimonial{
+        display: grid;
+        gap: 1rem;
+        p{
+            font-size: 1.25rem;
+            line-height: 25px;
+            font-weight: bold;
+            letter-spacing: 0.1px;
+        }
+        span{
+            opacity: 70%;
+            line-height: 18px;
+            letter-spacing: 0.2px;
+        }
+    }
+}
+

@@ -1,0 +1,6 @@
+
+@mixin tabplus {
+  @media (min-width: 599px) {
+    @content
+  }
+}
